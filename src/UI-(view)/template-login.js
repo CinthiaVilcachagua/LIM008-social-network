@@ -1,3 +1,5 @@
+import {clickBtnRegister,clickBtnIngresar} from "../View-controller/auth-controller.js" ;
+
 export const welcome = () => {
     const divElement = document.createElement('div');
     const welcomeTmp = `
@@ -11,7 +13,7 @@ export const welcome = () => {
     return divElement;
 }
 
-export const signInTmp = () => {
+export const registerTmp = () => {
     const divCreate = document.createElement('div');
     const registerTmp = `
         <h2>REGISTRO</h2>
@@ -26,10 +28,15 @@ export const signInTmp = () => {
         </form>
     `
     divCreate.innerHTML = registerTmp;
+    const btnRegistrar = divCreate.querySelector('#btn-registrar');
+    //REGISTRANDOSE
+    btnRegistrar.addEventListener('click', () => {
+      clickBtnRegister();
+    });
     return divCreate;
 }
 
-export const signUpTmp = () => {
+export const signInTmp = () => {
     const divNew = document.createElement('div');
     const loginTmp = `
         <h2>INGRESO</h2>
@@ -42,6 +49,11 @@ export const signUpTmp = () => {
         </form>
     `
     divNew.innerHTML = loginTmp;
+    const btnIngresar = divNew.querySelector('#btn-ingresar');
+    //INGRESANDO
+    btnIngresar.addEventListener('click', () => {
+       clickBtnIngresar();
+    });
     return divNew;
 }
 
