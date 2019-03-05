@@ -1,3 +1,5 @@
+import {clickBtnPostear} from "../View-controller/wall-controller.js";
+import { signOut } from "../Controller-(Functions)/muro.js" ;
 
 export const wallTmp = () => {
     const divCreate = document.createElement('div');
@@ -21,5 +23,19 @@ export const wallTmp = () => {
         </section>
     `
     divCreate.innerHTML = wall;
+    //INICIALIZANDO LA BASE DE DATOS
+    // llamando al boton de publicar post
+    const btnPostear = divCreate.querySelector('#btn-publicar');
+    btnPostear.addEventListener('click', () => {
+        clickBtnPostear();
+    });
+
+    //cerrando sesion
+    const btnCloseSesion = divCreate.querySelector('#btn-cerrar');
+    btnCloseSesion.addEventListener('click' , () => {
+        signOut()
+        window.location.hash = '#/register';
+    });
+
     return divCreate;
 }
