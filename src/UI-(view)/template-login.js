@@ -1,6 +1,6 @@
 import {clickBtnRegister,clickBtnIngresar} from "../View-controller/auth-controller.js" ;
 
-export const welcome = () => {
+export const welcomeTmp = () => {
     const divElement = document.createElement('div');
     const welcomeTmp = `
         <img>

@@ -1,4 +1,4 @@
-import {signInTmp, registerTmp} from '../UI-(view)/template-login.js'
+import {welcomeTmp, signInTmp, registerTmp} from '../UI-(view)/template-login.js'
 import {wallTmp} from '../UI-(view)/template-muro.js'
 const viewRuta = (hash) => {
     console.log(hash);
