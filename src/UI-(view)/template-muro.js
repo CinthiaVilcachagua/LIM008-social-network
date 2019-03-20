@@ -1,6 +1,6 @@
 import {clickBtnPostear} from "../View-controller/wall-controller.js";
-import { signOut } from "../Controller-(Functions)/muro.js" ;
-
+import { signOut } from "../Controller-(Functions)/login.js" ;
+import { editPost, deletePost} from "../Controller-(Functions)/muro.js"
 export const wallTmp = () => {
     const divCreate = document.createElement('div');
     const wall = `

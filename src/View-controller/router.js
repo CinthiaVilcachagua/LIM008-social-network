@@ -1,4 +1,4 @@
-import {welcomeTmp, signInTmp, registerTmp} from '../UI-(view)/template-login.js'
+import { signInTmp, registerTmp} from '../UI-(view)/template-login.js'
 import {wallTmp} from '../UI-(view)/template-muro.js'
 const viewRuta = (hash) => {
     console.log(hash);
@@ -19,7 +19,7 @@ const viewRuta = (hash) => {
 
 const viewTmp = (id) => {
     //llamamos al contenedor
-    const container = document.getElementById('root');
+    const container = document.getElementById('contenedor');
     container.innerHTML = '';
     switch(id) {
         case 'welcome' : container.appendChild(welcomeTmp());
