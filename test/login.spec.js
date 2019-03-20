@@ -1,24 +1,42 @@
-import  MockFirebase  from ' mock-cloud-firestore ' ;
-import {} from '../src/Controller-(Functions)/login.js';
+const firebasemock = require('firebase-mock');
+const mockauth = new firebasemock.MockFirebase();
+const mockfirestore = new firebasemock.MockFirestore();
+mockfirestore.autoFlush();
+mockauth.autoFlush();
 
-const fixtureData = {
-  _collection_: {
-    notes: {
-       _doc_: {
-            abc1d: {
-                    post: 'completar los test'
-            }
-        }
-    }
-  }
-}
 
-global.firebase  =  new  MockFirebase (fixtureData);
+global.firebase = firebasemock.MockFirebaseSdk(
+// use null if your code does not use RTDB
+  path => (path ? mockdatabase.child(path) : null),
+  () => mockauth,
+  () => mockfirestore
+);
 
-describe('myFunction', () => {
-    it('debería ser una función', () => {
-      return myFuction('parametro').then((data) => {
-      expect(data).toBe('function')
-     });
-    });
+import { register, signIn, signOut } from "../src/Controller-(Functions)/login.js";
+
+describe('register', () => {
+  it('DEberia poder registrarme', () => {
+    return register('inmelody10@gmail.com', '123456')
+    .then ((user) => {
+      expect(user.email).toBe('inmelody10@gmail.com')
+    })
+  })
+})
+
+describe('signIn', () => {
+  it('Debería poder iniciar sesion', () => {
+    return signIn('inmelody11@gmail.com', '11042013')
+      .then((user) => {
+        expect(user.email).toBe('inmelody11@gmail.com')
+      })
   });
+});
+
+describe('signOut', () => {
+  it('deberia poder cerrar sesión', () => {
+    return signOut()
+    .then((user) => {
+      expect(user).toBe(undefined)
+    })
+  })
+})
