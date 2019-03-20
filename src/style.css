@@ -1,0 +1,173 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+ h1 img {
+   margin-top: 5px;
+   margin-right: 5px;
+   height: 40px; 
+ }
+
+/* Comenzando el REGISTRADO y REGISTRO  */
+h2 {
+   font-family: 'Segoe UI', Tahoma; /*cambiar*/
+   text-align: center;
+   background: rgb(241, 229, 53);
+   padding: 10px;
+    /*para quitar el grosor font-weight: 5; */
+    border-radius: 7px 7px 0 0;
+}
+
+.form-register, .form-ingreso{
+   width: 97%;
+   max-width: 300px;
+   margin: auto;
+   background: #ffff;
+   border-radius: 7px;
+   margin-bottom: 40px;
+}
+
+.contenedor-inputs, .container-inputs{
+   padding: 10px 30px;
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.contenedor-inputs input, .container-inputs input{
+   width: 100%;
+   margin-bottom: 15px;
+   padding: 15px;
+   border-radius: 3px;
+   font-size: 16px;
+   border: 1px solid darkgray;
+}
+.contenedor-inputs button, .container-inputs button{
+   background: rgb(241, 229, 53);
+   padding: 10px 20px;
+   margin-top: 4px;
+   margin-left: 45px;
+   cursor: pointer;
+   border: none;
+   border-radius: 7px;
+   font-size:17px; 
+}
+
+.contenedor-inputs button:active, .container-inputs button:active {
+   transform: scale(1.05);
+}
+
+.contenedor-inputs p{
+   width:100;
+   margin :10px;
+   text-align: center;
+   font-size: 14px;
+
+}
+
+/* MURO */
+
+#muro-principal{
+   padding: 10px;
+   margin: auto;
+   width: 97%;
+   max-width: 560px;
+}
+
+#muro-principal h2{
+   width: 97%;
+   max-width: 400px;
+}
+
+.contenedor-muro{
+   width: 97%;
+   max-width: 200px;
+}
+
+.contenedor-muro p{
+   padding:10px;
+   font-size: 25px;
+}
+
+#post{
+   padding: 10px;
+   border-radius: 5px;
+   border: 0.5px solid;
+   margin:10px;
+   width: 300px;
+   height: 50px;
+}
+
+
+#btn-publicar{
+   border: none;
+   padding: 10px 20px;
+   border-radius: 7px;
+   background: rgb(34, 34, 5);
+   color: #ffff;
+   font-size: 15px;
+   margin:10px;
+   margin-left:250px;
+}
+
+#btn-cerrar{
+   border: none;
+   padding: 10px 20px;
+   border-radius: 7px;
+   background: rgb(241, 229, 53);
+   font-size: 15px;
+   margin: 10px;
+}
+
+
+/* POST */
+
+.posts{
+   padding:10px;
+   width: 97%;
+   max-width: 570px;
+   margin: auto;
+}
+
+.posts h2{
+   width: 97%;
+   max-width: 400px;
+}
+
+.contenedor-post{
+   padding:10px;
+   width: 97%;
+   max-width: 570px;
+}
+
+textarea {
+   border-radius: 7px;
+   background: #ffff;
+   border-color: rgb(194, 177, 30);
+   max-width: 80%;
+   margin: 5px;
+}
+
+.btn-editar, .btn-eliminar{
+   border: none;
+   padding: 10px 20px;
+   border-radius: 7px;
+   background: rgb(241, 229, 53);
+   font-size: 15px;
+   margin-bottom: 5px;
+}
+
+/* Footer */
+footer{
+   padding:5px;
+   background: rgb(68, 60, 60);
+}
+
+.copy{
+text-align: center;
+font-size: 18px;
+color: #ffff;
+}
