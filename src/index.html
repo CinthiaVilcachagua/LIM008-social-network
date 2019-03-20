@@ -1,31 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="./lib/style.css"/>
-  <title>LABORATORIANS</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Red Social</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css">
 </head>
 <body>
-  <header>
-    <div class="contenedor">
-      <h1><img>LABORATORIANS</h1>
-      <nav>
-        <a href="#/register" id="resgistrado">Registrarse</a>
-        <a href="#/login" id="ingresando">Ingresar</a>
-      </nav>
-    </div>
-  </header>
-  <main>
-    <div id="root">
-      <!-- aqui voy a ingresar todos mis templates -->
-    </div>
-  </main>
-  <footer>
-    <p class="copy"> Red Social &copy; 2019</p> 
-  </footer>
-  <script type="module" src="main.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase.js"></script>
+    <header>
+        <div class="contenedor">
+            <h1><img src="./img/labo.ico">LABORATORIANS</h1>
+            <div id="nav-muro"></div>
+        </div>
+    </header>
+    <main>
+      <div id="contenedor">
+        <section id="pagina-ingreso">
+        
+        </section> 
+      </div> 
+    </main>
+    <footer>
+        <p class="copy"> Red Social &copy; 2019</p> 
+    </footer>
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+    <!-- agregando librerias para la base de datos -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script> -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/4.12.1/firebase-firestore.js"></script> -->
+    <script>
+     // Initialize Firebase
+        const initialFirebase = () => {
+        const config = {
+          apiKey: "AIzaSyBP_d2MGv-UAGH9O3rtLo3C_9Io6YCuTJs",
+          authDomain: "red-social-11.firebaseapp.com",
+          databaseURL: "https://red-social-11.firebaseio.com",
+          projectId: "red-social-11",
+          storageBucket: "red-social-11.appspot.com",
+          messagingSenderId: "846664786919"
+        };
+
+        firebase.initializeApp(config);
+        };
+        initialFirebase();
+    </script>
+    <script type="module" src="main.js"></script>
 </body>
 </html>

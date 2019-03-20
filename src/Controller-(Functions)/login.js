@@ -1,36 +1,21 @@
-export const register = (email,password) => {
-    firebase.auth().createUserWithEmailAndPassword(email, password)
-      // le agregamos la validacion del correo agrgando el then
-      .then(() => {
-        verificar();
-      })
-      .catch((error) => {
-        // Handle Errors here.
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        console.log(errorCode);
-        console.log(errorMessage);
-      });
-  };
+export const register = (email,password) => 
+  firebase.auth().createUserWithEmailAndPassword(email, password)
+    // le agregamos la validacion del correo agrgando el then
+    /*.then(() => {
+      return verificar();
+    })*/
+
+
+//CREANDO UNA FUNCION PARA VERIFICAR/VALIDAR EL CORREO.
+/* const verificar = () => {
+  const user = firebase.auth().currentUser;
+  return user.sendEmailVerification()
   
-  //CREANDO UNA FUNCION PARA VERIFICAR/VALIDAR EL CORREO.
-   const verificar = () => {
-    const user = firebase.auth().currentUser;
+}*/
+
+export const signIn = (email,password) => 
+ firebase.auth().signInWithEmailAndPassword(email,password)
   
-    user.sendEmailVerification()
-    .then(() => {
-      console.log('... enviando correo');
-    }).catch((error) => {
-      console.log(error);
-    });
-  }
-  
-  export const signIn = (email,password) =>{
-    firebase.auth().signInWithEmailAndPassword(email,password)
-    .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      console.log(errorCode);
-      console.log(errorMessage, error);
-    });
-  };
+
+export const signOut = () => 
+ firebase.auth().signOut()   

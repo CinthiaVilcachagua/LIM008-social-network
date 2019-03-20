@@ -6,8 +6,8 @@ const viewRuta = (hash) => {
         case '' :
         case '#' :
         case '#/' :
-        case '#/welcome' : {return viewTmp('welcome')}
-        case '#/register' : 
+        //case '#/welcome' : {return viewTmp('welcome')}
+        case '#/register' : {return viewTmp('register')}
         case '#/login' :
         case '#/muro' : {
             const id = hash.split('/')[1];
